@@ -1,0 +1,101 @@
+{
+    "manifestVersion": 1,
+    "id": "wiTimeReport",
+    "publisher": "OneLuckiDev",
+    "version": "1.0.31",
+    "name": "Work Item Flow Efficiency",
+    "description": "Get Insight on the time your cards stay in your board columns.",
+    "public": true,
+    "categories": [
+        "Azure Boards"
+    ],
+    "tags": [
+        "backlog","state",
+        "cycle time",
+        "report","Board","Column"
+    ],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "icons": {
+        "default": "kanbantimeLogo.png"
+    },
+    "content": {
+        "details": {
+            "path": "overview.md"
+        },
+        "license": {
+            "path": "LICENSE"
+        }
+    },
+    "files": [
+        {
+            "path": "static",
+            "addressable": true
+        },
+        {
+            "path": "dist",
+            "addressable": true
+        },
+        {
+            "path":"images/flowScreen.PNG",
+            "addressable":true
+        },
+        {
+            "path":"images/boardColumns.PNG",
+            "addressable":true
+        },
+        {
+            "path":"images/waitworkAverages.PNG",
+            "addressable":true
+        }
+    ],
+    "badges": [
+        {
+            "href": "https://dev.azure.com/oneluckidev/OneLuckiDev/_apis/build/status/jeffpriz.ado-wait-work-time?branchName=main",
+            "uri": "https://dev.azure.com/oneluckidev/OneLuckiDev/_apis/build/status/jeffpriz.ado-wait-work-time?branchName=main",
+            "description": "Build for this extension run in Azure DevOps"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "onelucki-wi-wait-time",
+            "type": "ms.vss-web.hub",
+            "description": "Hub to show Work Item time in different states.",
+            "targets": [
+                "ms.vss-work-web.work-hub-group"
+            ],
+            "properties": {
+                "name": "Work Item Flow Efficiency",
+                "order": 150,
+                "icon": "asset://static/barIcon.png",
+                "uri": "dist/wiTime/context.html"
+            }
+        }
+    ],
+    "scopes": [
+        "vso.work",
+        "vso.project"
+    ],
+    "links": {
+        "support": {
+            "uri": "https://github.com/jeffpriz/ado-wait-work-time/issues"
+        },
+        "repository": {
+            "uri": "https://github.com/jeffpriz/ado-wait-work-time"
+        },
+        "build": {
+            "uri":"https://dev.azure.com/oneluckidev/OneLuckiDev/_apis/build/status/jeffpriz.ado-wait-work-time?branchName=main"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/jeffpriz/ado-wait-work-time"
+    },
+    "branding": {
+        "color": "rgb(27,160,225)",
+        "theme": "dark"
+    }
+}
